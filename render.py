@@ -12,9 +12,6 @@ def draw_electrical_field_lines(p: ElectricParticle):
     particula electrica p
     """
     
-    #import pdb
-    #pdb.set_trace()
-    
     x = np.linspace(-4, 4, 10)
     y = np.linspace(-4, 4, 10)
     X, Y = np.meshgrid(x, y)
@@ -24,7 +21,7 @@ def draw_electrical_field_lines(p: ElectricParticle):
     # plot
     fig, ax = plt.subplots()
 
-    ax.scatter(x=[p.r.x], y=[p.r.y])
+    #ax.scatter(x=[p.r.x], y=[p.r.y])
     ax.quiver(X, Y, U, V, color="C0", angles='xy',
               scale_units='xy', scale=5, width=.015)
 
