@@ -28,3 +28,20 @@ def draw_electrical_field_lines(p: ElectricParticle):
     ax.set(xlim=(-5, 5), ylim=(-5, 5))
 
     plt.show()
+
+
+def draw_electrical_particles_in_sphere(cargas: list, r: float):
+    """
+    Dibuja las particulas electricas
+    @param cargas: Listado de cargas electricas
+    @param r: Radio de la esfera
+    """
+    fig = plt.figure()
+    ax1 = fig.add_subplot(111, projection='3d')
+
+    x = [c.r.x for c in cargas]
+    y = [c.r.y for c in cargas]
+    z = [c.r.z for c in cargas]
+
+    ax1.scatter(x, y, z, c='g', marker='o')
+    plt.show()

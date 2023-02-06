@@ -30,7 +30,7 @@ class ElectricParticle:
         """
         return self.K * (self.q / r ** 2)
 
-    def electrical_potential(self, q: float, r: Custom2DVector) -> float:
+    def electrical_potential(self, r: int) -> float:
         """
         Calcula el potencial electrico generado por una carga q
         a una distancia r. 
@@ -38,4 +38,4 @@ class ElectricParticle:
         @param r: distancia a la que se desea medir el potencial electrico
         @return: potencial electrico generado
         """
-        return self.K * (q / r)
+        return self.K * (self.q / r)
